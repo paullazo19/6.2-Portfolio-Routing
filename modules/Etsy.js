@@ -3,7 +3,8 @@ import React from 'react'
 export default React.createClass({
   render(){
     return(
-      <div>{this.params.repoName}</div>
+      <section>{this.props.params.Etsy}</section>
+      // <h1>Etsy Project</h1>
     )
   }
 })

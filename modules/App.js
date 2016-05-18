@@ -1,18 +1,19 @@
 import React from 'react'
 import NavLink from './NavLink'
+import Home from './Home'
 
 export default React.createClass({
-  render() {
+  render(){
     return (
-      <div>
-        <h1>Pauls Portfolio</h1>
-        <ul role="nav">
-          <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/repos">Repos</NavLink></li>
-        </ul>
-        {this.props.children}
-      </div>
+      <section>
+        <h1>Paul's Portfolio</h1>
+        <nav role="nav">
+          <NavLink to="/" onlyActiveOnIndex={true}>Home&nbsp;</NavLink>
+          <NavLink to="/blog">Blog&nbsp;</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+        </nav>
+        {this.props.children || <Home/>}
+      </section>
     )
   }
 })
